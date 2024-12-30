@@ -1,20 +1,24 @@
 return {
+	-- Installs all the lsp's 
 	{
 		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
 		end
 	},
+	-- bridges the lsp and neovim
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls" }
+				-- add here the language
+				ensure_installed = { "lua_ls", "clangd" }
 			})
 		end
 	},
 	{
 		"neovim/nvim-lspconfig",
+		-- to remove the global variable error 
 		dependencies = {
 			{
 				"folke/lazydev.nvim",
@@ -28,8 +32,23 @@ return {
 				},
 			},
 		},
+		-- Making conection with the lsp's ...
 		config = function()
 			require("lspconfig").lua_ls.setup {}
+			require("lspconfig").clangd.setup {}
+
 		end,
 	}
+--[[	,{
+		"nvimtools/none-ls.nvim",
+		config = function()
+			local null_ls = require("null-ls")
+			null_ls.setup({
+				sources = {
+        			null_ls.builtins.formatting.stylua,
+        			--require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
+    			},
+			})
+		end
+	} --]]
 }
