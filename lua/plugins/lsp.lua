@@ -12,7 +12,7 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				-- add here the language
-				ensure_installed = { "lua_ls", "clangd" }
+				ensure_installed = { "lua_ls", "clangd"}
 			})
 		end
 	},
@@ -36,7 +36,7 @@ return {
 		config = function()
 			require("lspconfig").lua_ls.setup {}
 			require("lspconfig").clangd.setup {}
-
+		-- require("c++").clangd.setup {}
 		end,
 	}
 --[[	,{
