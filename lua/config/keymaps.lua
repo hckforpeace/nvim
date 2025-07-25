@@ -10,7 +10,7 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true, desc = "Move to right wi
 vim.keymap.set("n", "<leader>qq", "<cmd>qall<CR>", { desc = "Quit all" })
 -- Save buffer
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Quit all" }) 
-
+vim.keymap.set("n", "<leader>d", "<cmd>bd<CR>", {desc = "Delete buffer"})
 -- Setting color Scheme
 vim.cmd("colorscheme nightfox")
 
