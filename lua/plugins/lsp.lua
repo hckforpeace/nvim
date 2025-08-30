@@ -20,6 +20,10 @@ return {
 					-- Linters
 					"cpplint",
 					"luacheck",
+					"typescript-language-server", -- LSP
+					"prettier", -- Formatter
+					"prettierd",
+					"eslint_d",
 				},
 			})
 		end,
@@ -29,11 +33,7 @@ return {
 		config = function()
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({})
-			-- Clangd
-			lspconfig.clangd.setup({
-				cmd = { "clangd", "--background-index" }, -- optional
-				filetypes = { "c", "cpp", "objc", "objcpp" },
-			})
+			lspconfig.ts_ls.setup({})
 		end,
 	},
 }
