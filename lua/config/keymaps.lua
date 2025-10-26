@@ -9,14 +9,14 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true, desc = "Move to right wi
 -- Quit all
 vim.keymap.set("n", "<leader>qq", "<cmd>qall<CR>", { desc = "Quit all" })
 -- Save buffer
-vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save current buffer" }) 
-vim.keymap.set("n", "<leader>d", "<cmd>bd<CR>", {desc = "Delete buffer"})
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save current buffer" })
+vim.keymap.set("n", "<leader>d", "<cmd>bd<CR>", { desc = "Delete buffer" })
 -- Setting color Scheme
 vim.cmd("colorscheme nightfox")
 
 -- Fuzy Finder
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find file" }) 
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Search/Grep a word in files" }) 
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find file" })
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Search/Grep a word in files" })
 
 -- LSP keymaps
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {}) -- Go To definition
@@ -27,3 +27,7 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {}) -- Renames all re
 vim.keymap.set("n", "<leader>bb", "<cmd>bprevious<cr>", {})
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", {})
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+
+-- Flutter Dev
+vim.keymap.set("n", "<leader>fr", "<cmd>FlutterRun<cr>", { desc = "Start Flutter" })
+vim.keymap.set("n", "<leader>fq", "<cmd>FlutterQuit<cr>", { desc = "Stop Flutter" })
