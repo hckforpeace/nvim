@@ -13,6 +13,7 @@ return {
 					-- lsp
 					"lua-language-server",
 					"clangd",
+					"jdtls",
 
 					-- Formatters
 					"stylua",
@@ -35,6 +36,8 @@ return {
 			vim.lsp.enable("lua_ls")
 			vim.lsp.config("ts_ls", {})
 			vim.lsp.enable("ts_ls")
+			vim.lsp.config("jdtls", {}),
+			vim.lsp.enable("jdtls")
 		end,
 	},
 }

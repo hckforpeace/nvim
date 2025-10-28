@@ -18,6 +18,7 @@ return {
 
 					-- linters
 					-- Prettier formatter
+					null_ls.builtins.formatting.google_java_format,
 					null_ls.builtins.formatting.prettier,
 					null_ls.builtins.formatting.prettierd,
 					null_ls.builtins.formatting.clang_format,
