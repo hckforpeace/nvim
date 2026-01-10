@@ -1,4 +1,0 @@
--- local config = {
--- 	cmd = { vim.fn.expand("~./local/share/mason/bin/jdtls") }
--- }
--- require("jdtls").start_or_attach(config)

@@ -13,11 +13,12 @@ return {
 					-- lsp
 					"lua-language-server",
 					"clangd",
-					"jdtls",
+					"basedpyright",
 
 					-- Formatters
 					"stylua",
 					"clang-format",
+					-- "ruff",
 					-- Linters
 					"cpplint",
 					"luacheck",
@@ -34,10 +35,14 @@ return {
 		config = function()
 			vim.lsp.config("lua_ls", {})
 			vim.lsp.enable("lua_ls")
-			vim.lsp.config("ts_ls", {})
-			vim.lsp.enable("ts_ls")
-			vim.lsp.config("jdtls", {}),
-			vim.lsp.enable("jdtls")
+			vim.lsp.config("clangd", {})
+			vim.lsp.enable("clangd")
+			vim.lsp.config("basedpyright", {})
+			vim.lsp.enable("basedpyright")
+			vim.lsp.config("ruff", {})
+			vim.lsp.enable("ruff")
+			-- vim.lsp.config("ts_ls", {})
+			-- vim.lsp.enable("ts_ls")
 		end,
 	},
 }

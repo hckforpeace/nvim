@@ -24,8 +24,8 @@ vim.keymap.set("n", "rn", vim.lsp.buf.rename, {}) -- Renames all references to t
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {}) -- Renames all references to the symbol under the cursor.
 
 -- Buffer Navigation
-vim.keymap.set("n", "<leader>bb", "<cmd>bprevious<cr>", {})
-vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", {})
+vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", {})
+vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", {})
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 
 -- Flutter Dev
