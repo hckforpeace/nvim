@@ -92,4 +92,7 @@ end, { nargs = 1 })
 
 -- to copy
 vim.opt.clipboard = "unnamedplus"
-
+-- tab size
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
