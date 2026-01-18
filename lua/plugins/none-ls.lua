@@ -11,16 +11,11 @@ return {
 				sources = {
 					-- formatters
 					null_ls.builtins.formatting.stylua,
-					null_ls.builtins.formatting.ruff,
-
+					null_ls.builtins.formatting.prettier,
+					null_ls.builtins.formatting.clang_format,
+					
 					-- Lua linter
 					null_ls.builtins.diagnostics.luacheck,
-
-					-- linters
-					-- Prettier formatter
-					null_ls.builtins.formatting.prettier,
-					null_ls.builtins.formatting.prettierd,
-					null_ls.builtins.formatting.clang_format,
 				},
 			})
 		end,

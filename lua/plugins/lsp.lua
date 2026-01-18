@@ -13,19 +13,22 @@ return {
 					-- lsp
 					"lua-language-server",
 					"clangd",
-					"basedpyright",
+
+					-- Python
+					-- "basedpyright",
 
 					-- Formatters
 					"stylua",
 					"clang-format",
+					-- Python
 					-- "ruff",
 					-- Linters
-					"cpplint",
-					"luacheck",
+					-- "cpplint",
+					-- "luacheck",
 					"typescript-language-server", -- LSP
 					"prettier", -- Formatter
-					"prettierd",
-					"eslint_d",
+					-- "prettierd",
+					-- "eslint_d",
 				},
 			})
 		end,
@@ -37,12 +40,21 @@ return {
 			vim.lsp.enable("lua_ls")
 			vim.lsp.config("clangd", {})
 			vim.lsp.enable("clangd")
-			vim.lsp.config("basedpyright", {})
-			vim.lsp.enable("basedpyright")
-			vim.lsp.config("ruff", {})
-			vim.lsp.enable("ruff")
+
+			-- Python
+			-- vim.lsp.config("basedpyright", {})
+			-- vim.lsp.enable("basedpyright")
+			-- vim.lsp.config("ruff", {})
+			-- vim.lsp.enable("ruff")
+
 			-- vim.lsp.config("ts_ls", {})
 			-- vim.lsp.enable("ts_ls")
+			-- vimvim.lsp.config("ts_ls", {
+			-- vim.lsp.enable("prettier"			-- TypeScript/JavaScript LSP
+			vim.lsp.config("ts_ls", {
+				filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+			})
+			vim.lsp.enable("ts_ls")
 		end,
 	},
 }

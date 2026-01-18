@@ -20,6 +20,7 @@ vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Sear
 
 -- LSP keymaps
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {}) -- Go To definition
+vim.keymap.set("n", "gr", vim.lsp.buf.references, {}) -- Go To definition
 vim.keymap.set("n", "rn", vim.lsp.buf.rename, {}) -- Renames all references to the symbol under the cursor.
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {}) -- Renames all references to the symbol under the cursor.
 
