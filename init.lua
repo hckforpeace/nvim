@@ -96,3 +96,6 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
+--fold
+vim.opt.foldmethod = "indent"  -- or "syntax" or "expr"
+vim.opt.foldlevel = 99         -- open all folds by default

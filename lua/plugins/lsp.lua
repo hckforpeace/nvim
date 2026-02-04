@@ -13,6 +13,8 @@ return {
 					-- lsp
 					"lua-language-server",
 					"clangd",
+          "golangci-lint-langserver",
+          "gopls",
 
 					-- Python
 					-- "basedpyright",
@@ -40,6 +42,10 @@ return {
 			vim.lsp.enable("lua_ls")
 			vim.lsp.config("clangd", {})
 			vim.lsp.enable("clangd")
+			vim.lsp.config("gopls", {})
+			vim.lsp.enable("gopls")
+			vim.lsp.config("golangci-lint-langserver", {})
+			vim.lsp.enable("golangci-lint-langserver")
 
 			-- Python
 			-- vim.lsp.config("basedpyright", {})
