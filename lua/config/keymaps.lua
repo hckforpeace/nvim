@@ -12,7 +12,7 @@ vim.keymap.set("n", "<leader>qq", "<cmd>qall<CR>", { desc = "Quit all" })
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save current buffer" })
 vim.keymap.set("n", "<leader>d", "<cmd>bd<CR>", { desc = "Delete buffer" })
 -- Setting color Scheme
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme cyberdream")
 
 -- Fuzy Finder
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find file" })
