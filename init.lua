@@ -3,18 +3,18 @@ require("config.keymaps")
 
 -- Configure how diagnostics are displayed
 vim.diagnostic.config({
-	virtual_text = true, -- Show errors as virtual text at end of line
-	signs = {
-		text = {
-			[vim.diagnostic.severity.ERROR] = "󰅚 ",
-			[vim.diagnostic.severity.WARN] = "󰀪 ",
-			[vim.diagnostic.severity.HINT] = "󰌶 ",
-			[vim.diagnostic.severity.INFO] = " ",
-		},
-	},
-	underline = true,  -- Underline problematic code
-	update_in_insert = false, -- Don't update diagnostics while typing
-	severity_sort = true, -- Sort diagnostics by severity
+  virtual_text = true, -- Show errors as virtual text at end of line
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "󰅚 ",
+      [vim.diagnostic.severity.WARN] = "󰀪 ",
+      [vim.diagnostic.severity.HINT] = "󰌶 ",
+      [vim.diagnostic.severity.INFO] = " ",
+    },
+  },
+  underline = true,        -- Underline problematic code
+  update_in_insert = false, -- Don't update diagnostics while typing
+  severity_sort = true,    -- Sort diagnostics by severity
 })
 
 -- Diagnostic filtering commands
@@ -76,7 +76,7 @@ vim.api.nvim_create_user_command("DiagnosticsSetLevel", function(opts)
     INFO = vim.diagnostic.severity.INFO,
     HINT = vim.diagnostic.severity.HINT,
   }
-  
+
   local severity = severity_map[level]
   if severity then
     vim.diagnostic.config({
@@ -97,5 +97,13 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 --fold
-vim.opt.foldmethod = "indent"  -- or "syntax" or "expr"
-vim.opt.foldlevel = 99         -- open all folds by default
+vim.opt.foldmethod = "indent" -- or "syntax" or "expr"
+vim.opt.foldlevel = 99        -- open all folds by default
+
+-- auto read
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({
+  "FocusGained",
+  "BufEnter",
+  "CursorHold",
+}, { command = "checktime" })
