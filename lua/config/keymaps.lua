@@ -12,7 +12,7 @@ vim.keymap.set("n", "<leader>qq", "<cmd>qall<CR>", { desc = "Quit all" })
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save current buffer" })
 vim.keymap.set("n", "<leader>d", "<cmd>bd<CR>", { desc = "Delete buffer" })
 -- Setting color Scheme
-vim.cmd("colorscheme cyberdream")
+vim.cmd("colorscheme gruvbox")
 
 -- Fuzy Finder
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find file" })
@@ -30,5 +30,5 @@ vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", {})
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 
 -- Flutter Dev
-vim.keymap.set("n", "<leader>fr", "<cmd>FlutterRun<cr>", { desc = "Start Flutter" })
-vim.keymap.set("n", "<leader>fq", "<cmd>FlutterQuit<cr>", { desc = "Stop Flutter" })
+-- vim.keymap.set("n", "<leader>fr", "<cmd>FlutterRun<cr>", { desc = "Start Flutter" })
+-- vim.keymap.set("n", "<leader>fq", "<cmd>FlutterQuit<cr>", { desc = "Stop Flutter" })

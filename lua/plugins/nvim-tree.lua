@@ -23,7 +23,7 @@ return {
   opts = {
     window = {
       mappings = {
-        ["l"] = "open",        -- Use 'l' to open
+        ["l"] = "open_with_window_picker",        -- Use 'l' to open
         ["h"] = "close_node",  -- Use 'h' to close
         ["<C-v>"] = "open_vsplit", -- Use 'h' to close
         ["<C-h>"] = "open_split", -- Use 'h' to close

@@ -1,6 +1,2 @@
 -- return { "EdenEast/nightfox.nvim" }
-return {
-  "scottmckendry/cyberdream.nvim",
-  lazy = false,
-  priority = 1000,
-}
+return { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...}
