@@ -1,6 +1,12 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
-  update_focused_file = {
+  filesystem = {
+    follow_current_file = {
+      enabled = true,
+      leave_dirs_open = false,
+    },
+  },
+  d_file = {
     enable = true,
     update_root = true, -- optional but useful
   },
@@ -23,10 +29,10 @@ return {
   opts = {
     window = {
       mappings = {
-        ["l"] = "open_with_window_picker",        -- Use 'l' to open
-        ["h"] = "close_node",  -- Use 'h' to close
-        ["<C-v>"] = "open_vsplit", -- Use 'h' to close
-        ["<C-h>"] = "open_split", -- Use 'h' to close
+        ["l"] = "open_with_window_picker", -- Use 'l' to open
+        ["h"] = "close_node",          -- Use 'h' to close
+        ["<C-v>"] = "open_vsplit",     -- Use 'h' to close
+        ["<C-h>"] = "open_split",      -- Use 'h' to close
       },
     },
   },

@@ -17,13 +17,13 @@ return {
           "gopls",
 
           -- Python
-          -- "basedpyright",
+          "basedpyright",
 
           -- Formatters
           "stylua",
           "clang-format",
           -- Python
-          -- "ruff",
+          "ruff",
           -- Linters
           -- "cpplint",
           -- "luacheck",
@@ -54,10 +54,10 @@ return {
       vim.lsp.enable("golangci-lint-langserver")
 
       -- Python
-      -- vim.lsp.config("basedpyright", {})
-      -- vim.lsp.enable("basedpyright")
-      -- vim.lsp.config("ruff", {})
-      -- vim.lsp.enable("ruff")
+      vim.lsp.config("basedpyright", {})
+      vim.lsp.enable("basedpyright")
+      vim.lsp.config("ruff", {})
+      vim.lsp.enable("ruff")
 
       -- vim.lsp.config("ts_ls", {})
       -- vim.lsp.enable("ts_ls")
