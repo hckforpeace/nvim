@@ -7,6 +7,7 @@ return {
   },
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
+    dependencies = { "williamboman/mason.nvim" },
     config = function()
       require("mason-tool-installer").setup({
         ensure_installed = {
@@ -14,6 +15,7 @@ return {
           "lua-language-server",
           "clangd",
           "golangci-lint-langserver",
+          "golangci-lint", -- the linter binary the langserver shells out to
           "gopls",
 
           -- Python
@@ -50,13 +52,31 @@ return {
         },
       })
       vim.lsp.enable("gopls")
-      vim.lsp.config("golangci-lint-langserver", {})
-      vim.lsp.enable("golangci-lint-langserver")
+      vim.lsp.config("golangci_lint_ls", {})
+      vim.lsp.enable("golangci_lint_ls")
 
       -- Python
-      vim.lsp.config("basedpyright", {})
+      -- basedpyright: types + completion. Unused-import/variable are left to ruff.
+      vim.lsp.config("basedpyright", {
+        settings = {
+          basedpyright = {
+            analysis = {
+              typeCheckingMode = "standard",
+              diagnosticSeverityOverrides = {
+                reportUnusedImport = "none",
+                reportUnusedVariable = "none",
+              },
+            },
+          },
+        },
+      })
       vim.lsp.enable("basedpyright")
-      vim.lsp.config("ruff", {})
+      -- ruff: lint + format. Hover is disabled so basedpyright owns it.
+      vim.lsp.config("ruff", {
+        on_attach = function(client)
+          client.server_capabilities.hoverProvider = false
+        end,
+      })
       vim.lsp.enable("ruff")
 
       -- vim.lsp.config("ts_ls", {})
